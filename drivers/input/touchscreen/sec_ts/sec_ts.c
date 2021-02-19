@@ -2522,7 +2522,7 @@ void sec_ts_read_init_info(struct sec_ts_data *ts)
 	input_log_fix();
 }
 
-static void sec_ts_fw_update_work(struct work_struct *work)
+static void __maybe_unused sec_ts_fw_update_work(struct work_struct *work)
 {
 #ifdef SEC_TS_FW_UPDATE_ON_PROBE
 	struct sec_ts_data *ts = container_of(work, struct sec_ts_data,
